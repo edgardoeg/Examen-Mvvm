@@ -16,7 +16,7 @@
                    Keyboard="Numeric"
                    Text="{Binding Producto1}" />
 
-            <!-- Campo Producto 22 -->
+            <!-- Campo Producto 2 -->
             <Label Text="Producto 2:" />
             <Entry Placeholder="Ingrese precio"
                    Keyboard="Numeric"
@@ -30,20 +30,16 @@
 
             <!-- Subtotal -->
             <Label Text="Subtotal:" />
-            <Entry IsReadOnly="True" Text="{Binding Subtotal}"
-                   
-                   BackgroundColor="#EEEEEE" />
+            <Entry Text="{Binding Subtotal}" IsReadOnly="True" />
 
             <!-- Descuento -->
             <Label Text="Descuento aplicado:" />
-            <Entry IsReadOnly="True" Text="{Binding Descuento}"
-                   BackgroundColor="#EEEEEE" />
+            <Entry Text="{Binding Descuento}" IsReadOnly="True" />
 
             <!-- Total a pagar -->
             <Label Text="Total a pagar:" />
-            <Entry IsReadOnly="True" Text="{Binding Total}"
+            <Entry Text="{Binding Total}" IsReadOnly="True" />
                    
-                   BackgroundColor="#EEEEEE" />
 
             <!-- Botón Calcular -->
             <Button Text="Calcular" BackgroundColor="#4CAF50" Command="{Binding CalcularCommand}"/>
