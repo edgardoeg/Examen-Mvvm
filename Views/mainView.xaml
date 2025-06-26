@@ -4,31 +4,53 @@
              x:Class="Examen_Mvvm.Views.MainView"
              xmlns:ViewModel="clr-namespace:Examen_Mvvm.ViewModels"
              x:DataType="ViewModel:MainViewModel"
+             
              Title="Despensa">
                 
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Campo Producto 1 -->
             <Label Text="Producto 1:" />
-            <Entry Keyboard="Numeric" Text="{Binding Producto1}" />
+            <Entry Placeholder="Ingrese precio"
+                   Keyboard="Numeric"
+                   Text="{Binding Producto1}" />
 
+            <!-- Campo Producto 2 -->
             <Label Text="Producto 2:" />
-            <Entry Keyboard="Numeric" Text="{Binding Producto2}" />
+            <Entry Placeholder="Ingrese precio"
+                   Keyboard="Numeric"
+                   Text="{Binding Producto2}" />
 
+            <!-- Campo Producto 3 -->
             <Label Text="Producto 3:" />
-            <Entry Keyboard="Numeric" Text="{Binding Producto3}" />
+            <Entry Placeholder="Ingrese precio"
+                   Keyboard="Numeric"
+                   Text="{Binding Producto3}" />
 
+            <!-- Subtotal -->
             <Label Text="Subtotal:" />
-            <Entry IsReadOnly="True" Text="{Binding Subtotal}" />
+            <Entry IsReadOnly="True" Text="{Binding Subtotal}"
+                   
+                   BackgroundColor="#EEEEEE" />
 
-            <Label Text="Descuento:" />
-            <Entry IsReadOnly="True" Text="{Binding Descuento}" />
+            <!-- Descuento -->
+            <Label Text="Descuento aplicado:" />
+            <Entry IsReadOnly="True" Text="{Binding Descuento}"
+                   BackgroundColor="#EEEEEE" />
 
-            <Label Text="Total a Pagar:" />
-            <Entry IsReadOnly="True" Text="{Binding Total}" />
+            <!-- Total a pagar -->
+            <Label Text="Total a pagar:" />
+            <Entry IsReadOnly="True" Text="{Binding Total}"
+                   
+                   BackgroundColor="#EEEEEE" />
 
-            <Button Text="Calcular" Command="{Binding CalcularCommand}" />
-            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" />
+            <!-- Botón Calcular -->
+            <Button Text="Calcular" BackgroundColor="#4CAF50" Command="{Binding CalcularCommand}"/>
+
+            <!-- Botón Limpiar -->
+            <Button Text="Limpiar" BackgroundColor="#F44336" Command="{Binding LimpiarCommand}"/>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

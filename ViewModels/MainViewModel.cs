@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
+
 namespace Examen_Mvvm.ViewModels;
 
 public partial class MainViewModel : ObservableObject
@@ -11,6 +12,11 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private string subtotal;
     [ObservableProperty] private string descuento;
     [ObservableProperty] private string total;
+
+    private void Alerta(string Titulo, string Mensaje)
+    {
+        MainThread.BeginInvokeOnMainThread(async () => await App.Current!.MainPage!.DisplayAlert(Titulo, Mensaje, "Aceptar"));
+    }
 
     [RelayCommand]
     private void Calcular()
@@ -35,11 +41,14 @@ public partial class MainViewModel : ObservableObject
         {
             Application.Current.MainPage?.DisplayAlert("Error", "Ingrese valores numéricos válidos.", "OK");
         }
+        
     }
 
     [RelayCommand]
     private void Limpiar()
     {
-        Producto1 = Producto2 = Producto3 = Subtotal = Descuento = Total = string.Empty;
+        {
+            Producto1 = Producto2 = Producto3 = Subtotal = Descuento = Total = string.Empty;
+        }
     }
 }

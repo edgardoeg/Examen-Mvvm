@@ -1,4 +1,5 @@
-﻿using Examen_Mvvm.Views;
+﻿using Examen_Mvvm.ViewModels;
+using Examen_Mvvm.Views;
 
 namespace Examen_Mvvm
 {
@@ -7,7 +8,7 @@ namespace Examen_Mvvm
         public App()
         {
             InitializeComponent();
-            MainPage = new MainView();
+            MainPage = new MainView(new MainViewModel());
         }
     }
 
