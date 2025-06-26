@@ -42,10 +42,10 @@
                    
 
             <!-- Botón Calcular -->
-            <Button Text="Calcular" BackgroundColor="#4CAF50" Command="{Binding CalcularCommand}"/>
+            <Button Text="Calcular" BackgroundColor="#4CAF50" FontAttributes="Bold" TextColor="White" FontSize="18" CornerRadius="20" Command="{Binding CalcularCommand}"/>
 
             <!-- Botón Limpiar -->
-            <Button Text="Limpiar" BackgroundColor="#F44336" Command="{Binding LimpiarCommand}"/>
+            <Button Text="Limpiar" BackgroundColor="#F44336" FontAttributes="Bold" TextColor="White" FontSize="18" CornerRadius="20" Command="{Binding LimpiarCommand}"/>
             
         </VerticalStackLayout>
     </ScrollView>
