@@ -16,7 +16,7 @@
                    Keyboard="Numeric"
                    Text="{Binding Producto1}" />
 
-            <!-- Campo Producto 2 -->
+            <!-- Campo Producto 22 -->
             <Label Text="Producto 2:" />
             <Entry Placeholder="Ingrese precio"
                    Keyboard="Numeric"
